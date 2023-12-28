@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.pic{
+				width: 520px;
+				position: relative;
+				margin: 0 auto;
+			}
+			.pic button{
+				width: 20px;
+				height: 30px;
+				border: none;
+				background-color: rgba(0,0,0,0.3);
+				color: #fff;
+				position: absolute;
+				top:50%;
+				margin-top: -15px;
+				display: none;
+				
+			}
+			.pic:hover button{
+				display: block;
+				cursor: pointer;
+			}
+			.pic button.leftbtn{
+				border-radius: 0 15px 15px 0;
+				left:0;
+			}
+			.pic button.rightbtn{
+				border-radius: 15px 0 0 15px;
+				right:0;
+			}
+			.pic .circle{
+				background-color: rgba(255,255,255,0.3);
+				padding:3px 0;
+				border-radius: 10px;
+				position: absolute;
+				left:50%;
+				bottom: 15px;
+				font-size: 0;
+				margin-left: -35px;
+				
+			}
+			.pic .circle span{
+				float: left;
+				width: 8px;
+				height: 8px;
+				background-color: #fff;
+				border-radius: 50%;
+				margin: 0 3px;
+				cursor: pointer;
+			}
+			.pic .circle span.active{
+				background-color: #f50;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pic">
+			<a href=""><img src="../img/pic_01.jpg" alt=""/></a>
+			<button class="leftbtn"><</button>
+			<button class="rightbtn">></button>
+			<div class="circle">
+			<span class="active"></span>
+			<span></span>
+			<span></span>	
+			<span></span>
+			<span></span>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.son1{
+				width: 150px;
+				height: 100px;
+				background : pink;
+				float: left;
+			}
+			 .son2{
+				width: 200px;
+				height: 100px;
+				background : purple;
+				float: left;
+			}
+			 .father{
+				/*width: 500px;*/
+				/*height: 200px;*/
+				background : yellow;
+				/*overflow: hidden;*/
+			}
+			 .xiaoming{
+				width: 500px;
+				height: 200px;
+				background : blue;
+			}
+			/*.clear{
+				clear: both;
+			}*/
+			/*P::after{
+				content: "456";
+			}*/
+			/*.clearFix::after{
+				display: block;
+				content: ".";
+				height: 0;
+				visibility: hidden;
+				clear: both;
+			}*/
+			.clearFix
+			{
+				*zoom: 1;
+			}
+			.clearFix::before,.clearFix::after{
+				display: table;
+				content: "";
+			}
+			.clearFix::after{
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<p>123</p>-->
+		<div class="father clearFix">
+			<div class="son1"></div>
+			<div class="son2"></div>
+			<!--<div class="clear"></div>-->
+		</div>
+		<div class="xiaoming"></div>
+	</body>
+</html>

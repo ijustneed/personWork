@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>中国书法</title>
+		<style type="text/css">
+			
+			.pic{
+				width: 475px;
+				
+				position: relative;
+				margin: 30px auto;
+				float: right;
+			}
+			#zi{
+			    color:darkslategray;
+				width: 475px;
+                fonfont-size: 30px;
+			}
+			#zi2{
+				/*float: left;*/
+				color:darkslategray;
+				font-size: 30px;
+			     
+			}
+			#kai1{
+				box-shadow: 0  3px  5px 1px grey inset;
+				font-size: 40px;
+			}
+			.k1{
+				font-size: 30px;
+			}
+			.pic button{
+				width: 20px;
+				height: 30px;
+				border: none;
+				/*background-color: rgba(0,0,0,0.3);*/
+				background-color: rgba(0,0,0,0.3);
+				color: #fff;
+				position: absolute;
+				top:50%;
+				margin-top: -15px;
+				display: none;
+				
+			}
+			.pic:hover button{
+				display: block;
+				cursor: pointer;
+			}
+			.pic button.leftbtn{
+				border-radius: 0 15px 15px 0;
+				left:0;
+			}
+			.pic button.rightbtn{
+				border-radius: 15px 0 0 15px;
+				right:0;
+			}
+			.pic .circle{
+				background-color: rgba(100,100,100,0.3);
+				padding:3px 0;
+				border-radius: 10px;
+				position: absolute;
+				left:50%;
+				bottom: 15px;
+				font-size: 0;
+				margin-left: -35px;
+				
+			}
+			.pic .circle span{
+				float: left;
+				width: 8px;
+				height: 8px;
+				background-color: gray;
+				border-radius: 50%;
+				margin: 0 3px;
+				cursor: pointer;
+			}
+			.pic .circle span.active{
+				background-color: #f50;
+			}
+			
+			
+			
+			
+			body{
+				margin: 0;padding: 0;font-size: 24px;text-align: center;
+				background: url(../img/beijingshufa1.jpg);
+			}
+			
+			a{
+				text-decoration: none;
+				color: gray;
+				
+			}
+					
+			nav ul{
+				list-style: none;
+			}
+			nav li{
+				float: left;
+				width: 70px;
+				text-align: center;
+				padding: 5px;
+				padding-left:100px ;
+				cursor: pointer;
+			}
+			nav li:hover{
+				background: linear-gradient(dimgray,lightsteelblue);
+				border-radius:10px ;
+				background-clip:content-box;
+				color: white;
+				
+
+			}
+			*{
+				font-family: "新宋体";
+			}
+
+			div{
+				width: 980px;
+				margin: 5px auto;
+				background: gainsboro;
+			}
+			#top{
+				height: 300px;
+				/*width: 630px;*/
+				background-repeat: no-repeat;
+				width:980px;
+				box-shadow: 0  3px  5px 1px grey inset;
+				background:url(../img/shufa0.2.jpg);
+				/*background:url(../img/shufa0.jpg);*/
+				text-align-last: center;
+				}
+			#nav{
+				height: 60px;
+				
+				box-shadow: -3px -2px  5px 1px grey inset;
+				
+				
+				}
+			#banner{
+				height: 200px;
+				box-shadow:1px 1px 10px 1px grey;
+				}
+			#content{height: 200px;}
+			.content_left{
+				width: 200px;
+				height: 200px;
+				background-color: gainsboro;
+				float: left;				 
+				box-shadow:5px 5px 10px 2px grey;
+				margin: auto;
+				
+			}
+			.content_middle{
+				width: 570px;
+				height: 200px;
+				background-color: gainsboro;
+				float: left;
+				margin: 0 0 0 5px;
+				box-shadow:5px 5px 10px 2px grey;		
+				
+
+				
+			}
+			.content_right{
+				width: 200px;
+				background-color: gainsboro;
+				float: right;
+				height: 200px;
+				margin: 0; 
+				box-shadow:5px 5px 10px 2px grey;	
+			}
+			#footer{
+				height: 90px;
+				background-color: gainsboro;
+				
+	
+				}
+				#zhong{
+					/*float: right;*/
+		
+				}
+				header{
+					
+					
+				}
+				section{
+					/*background: url(../img/shufaw1.jpg);*/
+				    text-decoration:blink;
+				    color:darkslategray;
+				    border: double;
+				}
+				#kong1{
+					/*border:double;*/
+					width: auto;
+					height: 50px;
+					background: none;
+				}
+				#xingshu{
+					float: right;
+					width: 641px;
+				}
+				#xingshu0{
+					background: none;
+					font-size: 30px;
+					color:darkslategray;
+					
+				}
+				.xs1{
+					 	box-shadow: 0  3px  5px 1px grey inset;
+				       font-size: 40px;
+				       color:darkslategray;
+				        
+				}
+				ul{
+					list-style: none;
+				}
+		    .clear{
+				clear: both;
+			}
+			
+			.cs11{
+			  color:darkslategray;
+                font-size: 30px;           
+					width: 641px;
+					background: none;
+					margin: 0;
+					margin-left: 45px;
+					margin-top: 50px;
+					line-height: 70px;
+					border: double;
+					width: 900px;
+			}
+			#footer2{
+				background: none;
+				margin: 9px;
+				margin-top: 20px;
+			}
+			#cssx{
+				display: block;
+				margin-bottom: 80px;
+			}
+			.lishuleft{
+				width: 350px;
+				height: 280px;
+				background-color: #ccc;
+				float: left;
+				margin: 0;
+				/*border: double;*/
+				box-shadow:5px 5px 10px 2px grey;	
+			}
+			.lishuright{
+				width: 625px;
+				height: 280px;
+				background-color: #ccc;
+				float: left;
+				margin: 2px;
+				/*margin-left: -1px;*/
+			box-shadow:5px 5px 10px 2px grey;	
+			}
+			.lsc{
+				display: inline-block;
+				margin-top: 45px;
+				margin-bottom: 50px;
+				font-size: 30px;
+				color:darkslategray;
+				text-indent: 2em;
+				line-height: 50px;
+			}
+			.lss3{
+				margin-top: 30px;
+				box-shadow:5px 5px 10px 2px grey;
+				margin-bottom: 20px;	
+			}
+			#xz1{
+				background: none;
+				margin-bottom: 20px;
+			}
+			#bottom11{
+				margin: 0;
+				margin-top: 50px;
+				width: 100%
+				height: 350px;
+			}
+						
+
+
+
+		</style>
+	</head>
+	<body>
+
+		<div id="top"> </div>
+		<div id="nav">
+			<nav>
+				<ul>
+					<li><a href="#last1">楷书书法</a></li>
+					<li><a href="#last2">行书书法</a></li>
+					<li><a href="#last3">草书书法</a></li>
+					<li><a href="#last4">隶书书法</a></li>
+					<li><a href="#last5">小篆书法</a></li>
+				</ul>
+			</nav>
+			</div>
+		<div id="banner"><img src="../img/shufa005.jpg" height="200px" width="979px"/></div>
+		<div id="content">
+			<div class="content_left"><img src="../img/shufa4.jpg"   width="200px" height="200px"/></div>
+			<div class="content_middle"><img src="../img/shufaw2.jpg"   width="570px" height="200px"/></div>
+			<div class="content_right"><img src="../img/shufa5.jpg" width="200px" height="200px  /></div>
+		</div>	
+		<div id="footer"><!--<img src="../img/shufaw1.jpg" >--></div>
+        	
+        	
+        			
+		<header>  &nbsp;</header>
+		<section>
+			
+<p>中国五千年璀璨的文明及无与伦比的丰富文字记载都已为世人所认可，</p>
+<p>在这一博大精深的历史长河中，中国的书画艺术以其独特的艺术形式和</p>
+<p>艺术语言再现了这一历时性的嬗变过程。而具有姊妹性质的书画艺术在</p>
+<p>历史的嬗变中又以其互补性和独立性释读了中国的传统文化内涵。由于</p>
+<p>书、画创作所采用的工具与材料具有一致性。《历代名画记》中谈论古</p>
+<p>文字、图画的起源时说：“是时也，书、画同体而未分，象制肇创而犹略</p>
+<p>无以传其意，故有书；无以见其形，故有画”。书画虽然具有同源的可比</p>
+<p>性，但以后的发展状况是以互补的独立性发展变化的。中国书法艺术的形</p>
+<p>成、发展与汉文字的产生与演进存在着密不可分的连带关系。那么究竟什</p>
+<p>么是“书法”呢？我们可以从它的性质、美学特征、源泉、独特的表现手法</p>
+<p>方面去理解。书法是以汉字为基础、用毛笔书写的符号艺术，体现了万事</p>
+<p>万物的“对立统一”的规律又反映人作为主体的精神、气质、学识和修养。</p>
+</section>
+       
+       
+       
+        <span id="zi">
+        	<a name="last1"><hr /></a> 
+        	<div id="kai1">
+        		楷书
+        	</div>
+        	<p class="k1">楷书也叫正楷。从程邈创立的隶书逐渐演变而来，更趋简化，横平竖直。</p>
+        	<p class="k1">《辞海》注“形体方正，笔画平直，可作楷模。”始于汉末，长盛不衰。</p>
+        </span>
+
+       	 <div class="pic">
+			<a href=""><img src="../img/shufa64.jpg""/></a>
+			<button class="leftbtn"><</button>
+			<button class="rightbtn">></button>
+			  <div class="circle">
+			     <span class="active"></span>
+			     <span></span>
+			     <span></span>	
+			     <span></span>
+			     <span></span>
+			  </div>
+		</div>
+		
+		
+		
+      <span id="zi2">
+       	<p>楷书的产生，紧扣汉隶的规矩法度，而追求形体美的进一步发展，汉末、三国时期，汉字的书写 逐渐变波、磔而为撇、捺，且造出了许多新笔划。</p>      
+       	<p>楷书的特点在于规矩整齐，是字体中的楷模，所以被称为楷书，自从它被发明之后，便一直沿用，直至现代。</p>
+       	<p>楷书有楷模的意思，张怀瓘《书断》中已先谈到过。六朝人仍习惯地用着它，例如羊欣《采》文，王僧虔《论书·韦诞传》都是用楷书攥写传播。</p>
+       	<p>“诞字仲将，京兆人，善楷书。”那是“八分楷法”的简称。到北宋才以之代替了正书之名，内容显然不同。</p>	
+       	<p>名异实同和名同实异之例，大概有以上这些。楷书是我国封建社会南北魏到晋唐最为流行的一种书体。在楷书产生之前，我国的书法已有多种。</p>
+       	<p>大篆、小篆和隶书三种书体。大篆是相对小篆而言的，一般把小篆以前所有的古文字统称为大篆，包括甲骨文、金文和战国时除秦国外六国文字。</p>
+       	<p></p>	 
+       </span>
+       
+       
+       
+       <div id="kong1">       	
+       </div>
+       
+       <div id="">
+       	<a name="last2"></a><hr />
+       </div>
+       <div class="xs1">
+       	行书
+       </div>
+       
+       <div id="xingshu">
+       	<img src="../img/shufax1.jpeg"/>
+       </div>
+
+       <div id="">
+       	
+       </div>
+       <div id="xingshu0">
+       	<p>行书，是一种书法统称，分为行楷和行草两种。在楷书的基础上发展起源。</p>
+       	<p>介于楷书、草书之间的一种字体，是为了弥补楷书的书写速度太慢和草书。</p>
+       	<p>楷书那样端正，实质上它是楷书的草化或草书的楷化。楷法多于草法的叫“行楷”。草法多于楷法的叫“行草”。行书实用性和艺术性皆高，而楷书是文字符号。相较之下行书更有意境和艺术性。</p>
+       	<p>楷书的实用性高且见功夫；相比较而言，草书则是艺术性高，但是实用性显得相对不足。行书则是历经漫长岁月淘洗留下的艺术精髓，是中华民族对审美领域的贡献，是书法的书写形式上的突破，对后世产生较大影响。</p>
+       </div>
+       
+       <ul>
+       	<li><img src="../img/xs2.jpg"/ width="900px" height="300px" ></li>
+       	<li>张洞英行书作品</li>
+       	<li>&nbsp;</li>
+       	<li><img src="../img/xs3.jpg" width="900px" height="400px" alt="" /></li>
+       	<li>现代行书书法-行草行书</li>
+       	<li>&nbsp;</li>
+       	<li><img src="../img/xs4.jpg" width="900px" height="300px"/></li>
+       	<li>文哲行书作品</li>
+       </ul>
+       
+       
+       <a name="last3"><hr /></a>
+      <div class="xs1">
+       	草书
+       </div>
+		<div id="content">
+			<div class="content_left"><img src="../img/cs2.jpg"   width="200px" height="200px"/></div>
+			<div class="content_middle"><img src="../img/cs1.jpg"   width="570px" height="200px"/></div>
+			<div class="content_right"><img src="../img/cs3.jpg" width="200px" height="200px"  /></div>
+		</div>	
+		
+		<div class="cs11" >
+		
+草书是汉字的一种字体，有广狭二义。广义的，不论年代，凡写的潦草的字都算作为草书。狭义的，即作为一种特定的字体，  形成于汉代   ，是为了书写简便在隶书基础上演变出来的。
+大约从东晋时代开始，为了跟当时的新体草书相区别。把汉代的草书称作章草。新体草书相对而言称作今草，其又分大草（也称狂草）和小草，在狂乱中觉得优美。正如李志敏所说：“临于池，酌于理，师于物，得于心，悟于象，然后始入草书妙境。 ”  
+草书由于字形太简单，彼此容易混淆，所以不能像隶书取代篆文那样，取代隶书而成为主要的字体。  
+	
+		</div>
+<div id="footer2"><img src="../img/cs4.jpg" width="900px" ></div>
+<span id="cssx">
+	草书横幅-苏轼诗
+</span>
+      
+       <a name="last4"></a><hr />
+        <div class="xs1">
+       	隶书
+       </div>
+			<div class="lishuleft"><img src="../img/ls2.jpg" width="350" height="282px"/></div>
+			<div class="lishuright"><img src="../img/ls1.jpg" width="625"/></div>
+		<span class="lsc">
+			
+隶书，有秦隶、汉隶等，一般认为由篆书发展而来，字形多呈宽扁，横画长而竖画短，讲究“蚕头燕尾”、“一波三折”。
+根据出土简牍，隶书始创于秦朝，传说程邈作隶，汉隶在东汉达顶峰，承篆书传统，开魏晋南北朝，对后世书法有着不可小觑的影响，书法界有“汉隶唐楷”之称。
+
+		</span>
+		<div class="lss3">
+			<img src="../img/ls3.jpg" width="980px" />
+		</div>
+		<span id="">
+			【白云书坊】隶书书法作品
+		</span>
+		
+		
+		
+		
+		<a name="last5"><hr /></a>
+	  <div class="xs1">
+       	小篆
+       </div>
+       <div id="">
+       	<img src="../img/xz1.jpg" width="980px"/>
+       </div>
+       <span class="lsc">
+       	小篆，是在秦始皇统一六国后（公元前222年），推行“书同文，车同轨”，统一度量衡的政策，由丞相李斯负责，在秦国原来使用的大篆籀文的基础上，进行简化，创制了统一文字的汉字书写形式。一直从秦朝流行到西汉末年（约公元8年），才逐渐被隶书所取代。但因为其字体优美，颇有古风古韵，所以始终被书法家所青睐。又因为其笔画复杂，形式奇古，而且可以随意添加曲折，印章刻制上，尤其是需要防伪的官方印章，一直采用篆书，直到封建王朝覆灭，近代新防伪技术出现.春秋战国时期，诸侯割据， [1]  各国的汉字出现了简繁不一、一字多形的情况。秦灭六国后，下令以秦国的“小篆”作标准，统一的文字。篆体，又称“篆书”，是小篆、大篆合称，因习惯把“籀文”称大篆，故后人把“篆文”专指小篆。
+       </span>
+       <div id="xz1">
+       	<img src="../img/xz11.jpg"/ >        		
+       	</div>
+         <span id="">
+         《小篆 柳宗元诗》 明远居士	
+         </span>
+         
+         
+
+			<div id="bottom11">
+				<p>Design By XiangXv &nbsp; WeChatID：***</p>				
+				<p>学号202010101540016</p>
+				<p> © Copyright Reserved -Class计算机203</p>						
+				</div>
+
+		</footer11>
+	</body>
+</html>

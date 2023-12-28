@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /*body{
+            background-color: rgb(60,60,70);
+            display: flex;
+            justify-content: center;
+        }*/
+        .aa{
+            position: relative;
+            top: 250px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 0 30px;
+        }
+        .cc,.bb{
+            font: 900 50px '';
+            line-height: 150px;
+            position: absolute;
+            color: brown;
+            top: 0;
+            /* 使文字上下移动时有0.4s的过渡效果 */
+            transition: .4s;
+        }
+
+        .cc{
+            /* 裁剪文字的上半部分，括号里的四个值分别是
+            top，right，bottom，left */
+            clip-path: inset(49% 0 0 0);
+        }
+        .bb{
+            /* 裁剪文字的下半部分 */
+            clip-path: inset(1% 0 50% 0);
+        }
+        .aa:hover .bb,.aa:hover .cc{
+            /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+            top: calc(var(--i)*1px);
+        }
+        .aa:hover .dd{
+            opacity: 1;
+        }
+        .dd{
+            text-decoration: none;
+            color: cyan;
+            font: 60 30px '';
+            line-height: 150px;
+            opacity: 0;
+            transition: .3s;
+        }
+        .aa{
+        	float: left;
+        	margin: 0 5%;
+        	display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="aa">
+        <div class="bb" style="--i:-30">BALD</div>
+        <div class="cc" style="--i:30">BALD</div>
+        <a href="#" class="dd">点赞/Fabulous</a>
+    </div>
+    <div class="aa">
+        <div class="bb" style="--i:-30">CHEN</div>
+        <div class="cc" style="--i:30">CHEN</div>
+        <a href="#" class="dd">关注/follow</a>
+    </div>
+    <div class="aa">
+        <div class="bb" style="--i:-30">GOAT</div>
+        <div class="cc" style="--i:30">GOAT</div>
+        <a href="#" class="dd">收藏/Collection</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.orange{
+				border: dashed 1px orange;
+			}
+			#tijiao1{
+				background: lightpink;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+    <form action="" method="post" oninput="y.value=x.value">
+    	<h3>学生信息表</h3>
+      姓名：<input type="text"  class="orange" name="" id=""  value="" required="required" placeholder="请输入您的名字"/><br />
+      密码：<input type="password" name="" id="" value="" /><br />
+     年龄： <input type="range" name="x" id="" value="20" max="120" min="0" />
+    <output name="y"></output><br />
+    分数：<input type="number" name="" id="" value="85"  max="100" min="0" /><br />
+    学校：<input type="text" name="" id="" value="" list="school"/>
+    <datalist id="school">
+    	<option value="金华职业技术学院"></option>
+    	<option value="台州学院"></option>
+    	<option value="浙江师范大学"></option>
+    	<option value="浙江大学"></option>
+    </datalist><br />
+    <input type="submit" id="tijiao1" value="提交"/>
+    <input type="reset" name="" id="" value="重置" />
+    </form>
+	</body>
+</html>

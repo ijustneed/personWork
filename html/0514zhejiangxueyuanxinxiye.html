@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background: forestgreen;
+			}
+			h1{
+				text-align: center;
+				font-size: 30px;
+			}
+			div{
+				width: 350px;
+				height: 450px;
+				margin: 40px auto;
+			}
+            .xm{
+            	border: 2px solid orange;
+            }
+            input{
+            	width: 150px;
+            	border: 2px solid orange;
+            }
+            
+            span{
+            	text-align: right;
+            	width: 100px;
+            	padding-right: 10px;
+            	display: inline-block;
+            }
+            #submit1{
+            	width: 70px;
+            	background: red;
+            	color: white;
+            	border: none;
+            }
+            p{
+            	text-align: center;
+            }
+		</style>
+	</head>
+	<body>
+		
+		<div id="">
+			
+			<form action="" method="post" oninput="y.value=x.value">
+				<h1>浙江学员信息页</h1><br />
+ <span>姓名:</span><input type="text" class="xm"  name="" id=""  value="" required="required" placeholder="请输入您的名字"/><br />
+  <span>年龄:</span> <input type="range" name="x" id="" value="18" max="120" min="7" step="1"/>
+    <output name="y"></output><br />
+			<span>邮箱</span><input type="email" name="" id="" value="" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" placeholder="请输入您的邮箱" />
+			    <span>成绩:</span><input type="number" name="" id="" value="85"  max="100" min="0" /><br />
+			    <span>所在城市:</span><input type="text" name="" id="" value="" list="school" placeholder="请选择您所在的城市"/>
+    <datalist id="school">
+    	<option value="杭州"></option>
+    	<option value="宁波"></option>
+    	<option value="温州"></option>
+    	<option value="绍兴"></option>
+    	<option value="湖州"></option>
+    	<option value="嘉兴"></option>
+    	<option value="金华"></option>
+    	<option value="台州"></option>
+    	<option value="丽水"></option>
+    	<option value="舟山"></option>
+    </datalist><br />
+			   <p><input type="submit" id="submit1" value="提交"/></p> 
+
+			
+			</form>
+		
+		</div>
+		
+	</body>
+</html>

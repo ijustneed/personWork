@@ -1,0 +1,34 @@
+header,section,footer{
+	width: 1240px;
+	margin: 0 auto;
+}
+header img{
+	width: 1240px;
+}
+.tu,.zi{
+	float: left;
+	width: 240px;
+	
+}
+.tu img{
+	width:240px;
+}
+.clear{
+	clear: both;
+}
+.zi,footer{
+	background:cadetblue;
+	color: white;
+	text-align: center;
+}
+.zi{
+	height: 276px;
+	font-size: 40px;
+	line-height: 276px;
+}
+.tu{
+	margin-left:10px ;
+}
+footer{
+	line-height: 35px;
+}

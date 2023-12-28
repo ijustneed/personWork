@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="css/stylesheet2.css ">
+		<style type="text/css">
+			*{
+				margin: 0;
+			}
+			
+			
+			/*搜索框*/
+		 .a2{
+            position: absolute;
+            /*top: 25%;*/
+            /*left: 80%;*/
+            transform: translate(-50%,-50%);
+            background-color: #2f3640;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+            margin-top:150px;
+            margin-left: 50%;
+           
+        }
+        .a2:hover .b2{
+            width: 500px;
+            padding: 0 6px;
+        }
+        .a2:hover .c2{
+            background-color: wheat;
+        }
+        .b2{
+            border: none;
+            background: none;
+            /* 取消选中搜索框时的外边框 */
+            outline: none;
+            width: 0;
+            padding: 0;
+            transition: .4s;
+            line-height: 40px;
+            font-size: 20px;
+            color: wheat;
+        }
+        .c2{
+            color: #e94118;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+        }
+        
+        
+			
+			/*动态图*/
+			.a1{
+	            width: 65.88%;
+	            height: 300px;
+	            position: relative;
+	            top: 200px;
+	            overflow: hidden;
+	            display: flex;
+	            justify-content: center;
+	            /*margin-left: 20%;*/
+	           margin: 0 auto;
+	            position: relative;
+	            margin-top: 30PX;
+	          
+       		 }
+       		 .a1 button{
+       		 	width: 20px;
+       		 	height: 30px;
+       		 	border: none;
+       		 	background-color: rgba(0,0,0,0.3);
+       		 	color: #fff;
+       		 	position: absolute;
+       		 	top: 50%;
+       		 	margin-top: -15px;
+       		 	display: none;
+       		 }
+       		 .a1:hover button{
+       		 	display: block;
+       		 	cursor: pointer;
+       		 }
+       		 .a1 button.leftbtn{
+       		 	border-radius: 0 15px 15px 0;
+       		 	left: 0;
+       		 }
+       		 .a1 button.rightbtn{
+       		 	border-radius: 15px 0 0 15px;
+       		 	right: 0;
+       		 }
+
+       		 
+       		 .a1 .circle{
+				background-color: rgba(255,255,255,0.3);
+				padding:3px 0;
+				border-radius: 10px;
+				position: absolute;
+				left:50%;
+				bottom: 15px;
+				font-size: 0;
+				margin-left: -35px;
+				
+			}
+			.a1 .circle span{
+				float: left;
+				width: 8px;
+				height: 8px;
+				background-color: #fff;
+				border-radius: 50%;
+				margin: 0 3px;
+				cursor: pointer;
+			}
+			.a1 .circle span.active{
+				background-color: #f50;
+			}
+       		 
+       		 
+        .b{
+            transition: .7s;
+            overflow: hidden;
+        }
+        .b:hover{
+            flex-shrink: 0;
+            flex-grow: 0;
+        } 
+         
+        
+        
+        
+        
+        .kong{
+        	height: 250px;
+        }
+        hr{
+        	width: 70%;
+        	margin: 0 auto;
+        }
+        h1{
+        	width: 70%;
+        	margin-left: 15%;
+        	text-align: center;
+        	/*margin-left: 280px;*/
+        	margin-top: 5px;
+        }
+        h2{
+        	text-align: center;
+        	font-family:"calisto mt";
+        	margin-bottom: 5px;
+        }
+        body{
+        	width: 100%;
+	           
+	            justify-content: center;
+	            /* 给背景一个渐变 */
+	            background:linear-gradient(
+	                to left,
+	                rgb(238, 92, 92),
+	                rgb(154, 127, 250)) ;                   
+       		}
+			#logo{
+				margin-top: 2px;
+			}
+			#header{
+				width: 100%;
+				height: 130px;
+				background-color: black;
+				opacity: 0.75;
+				box-shadow: 0 4px 4px rgba(0,0,0,0.5);
+				text-align: center;
+				position: fixed;
+				top: 0;
+				z-index: 100;
+			}
+			#nav{
+				margin: -20px 50px 0 50px;
+			}
+			#header a{
+				padding-left: 5%;
+				padding-right:5% ;
+				text-decoration: none;
+				color: darkgray;
+			}
+			#header a:hover{
+				color: white;
+			}
+			#container2{
+				width: 300px;
+				font-size: 45px;
+				margin: 0 auto;
+				margin-top: 130px;
+			}
+			
+			
+			footer{
+				height: 175px;
+				width: 97%;
+				background-color:rgb(204, 212, 230);
+				 background:linear-gradient(
+	                to left,
+	                rgb(238, 92, 91),
+	                rgb(230, 200, 250)) ;                   
+				margin-top: 100px;
+				padding: 10px;
+				opacity: .89;
+			}
+			#foot_left,#foot_right{
+				box-sizing: border-box;
+				width: 50%;
+				height: 170px;
+				float: left;
+			}
+			#foot_left{
+				text-align: right;
+				border-right:#fff 1px solid ;
+			}
+			#foot_left img{
+				/*width: 30px;*/
+				margin-right: 30px;
+				margin-top: 10px;
+			}
+			 #foot_left p{
+			 	margin: 20px;			 	
+				line-height: 20px;
+				color: #666666;
+				text-shadow: 1px 1px #fff;
+			}
+			#foot_right{
+				padding: 10px;
+			}
+			#foot_right img{
+				width: 250px;
+			}
+			#foot_right p{
+				margin-top: 10px;
+				line-height: 20px;
+				color: #666666;
+				text-shadow: 1px 1px #fff;
+			}
+			#foot_rightdiv{
+				margin-top:-25px ;
+			}
+			.clear{
+				clear: both;
+			}
+			#gun{
+				margin:50px auto;
+				margin-left:32%;
+				
+			}
+			#container3{
+				width: 80%;
+				margin: 0 auto;
+			}
+			.warp:nth-child(3n+2){
+				margin-left: 3.5%;
+				margin-right: 3.5%;
+			}
+			
+			.warp{
+				margin-top: 3%;
+				width: 31%;
+				float: left;
+				
+				position: relative;
+			}
+			.warp img{
+				width: 100%;
+				border-radius: 5px;
+				box-shadow: 2px 2px 2px gainsboro;
+			}
+			
+			.warp img:hover{
+				opacity: .5;
+			
+
+			
+			}
+
+
+			
+			.warp .test1{
+				position: absolute;
+				/*font-size: 250%;*/
+				font-size: 20px;
+				z-index: 90;
+				text-align: center;
+				width: 100%;
+				bottom: 0%;
+				opacity: 10;
+				/*border: solid;*/
+				background-color: /*rgba(205,244,300,.8);*/white;		
+				border-radius:0 0 5px 5px ;
+			}
+			
+			
+			
+			  /*.warp .test2{
+				position: absolute;
+				width: 100%;
+				top: 0;
+				height: 80px;
+				background: #2C3E50;
+				opacity: .3;
+				z-index:91;
+			  }*/
+			
+
+			
+			
+			@media only screen and (max-width:700px ) {
+				.warp{
+					width: 48%;
+					margin-top: 1.5%;
+					
+				}
+				/*.warp:nth-child(3n+2){
+					margin: 0;
+					margin: 1.5%;
+				}
+				.warp:nth-child(3){
+					margin-right: 1.5%;
+				}
+				.warp:nth-child(5){
+					margin-left: 0;
+				}
+				
+				.warp:nth-child(8){
+					margin-left: 0;
+					float: left;
+				}*/
+				.warp:nth-child(n+1){
+					margin-left: 0;
+					margin-right:1.5% ;					
+				}
+				footer{
+					width: 89.9%;
+					height: 270px;
+					opacity: .75;
+				}
+				body{
+					width: 100%;
+				}
+				footer img{
+					width: 100%;
+				}
+				/*footer {
+					font-size: 100%;
+				}*/
+				#foot_right img{
+					width: 100%;
+				}
+				#header{
+					height:auto;
+				}
+			   .a2:hover .b2{
+            width: 35%;
+            padding: 0 6px;
+             }
+			 	
+			}
+			
+			
+			
+			.hr2{
+				
+				margin-left: 8%;
+				margin-top: 60px; 
+				display: inline-block;
+				width: 84%;
+			}
+			
+			
+			
+			
+			        .aa{
+            position: relative;
+            top: 250px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 0 30px;
+        }
+        .cc,.bb{
+            font: 900 50px '';
+            line-height: 150px;
+            position: absolute;
+            color: brown;
+            top: 0;
+            /* 使文字上下移动时有0.4s的过渡效果 */
+            transition: .4s;
+        }
+
+        .cc{
+            /* 裁剪文字的上半部分，括号里的四个值分别是
+            top，right，bottom，left */
+            clip-path: inset(49% 0 0 0);
+        }
+        .bb{
+            /* 裁剪文字的下半部分 */
+            clip-path: inset(1% 0 50% 0);
+        }
+        .aa:hover .bb,.aa:hover .cc{
+            /* 让--i为30的向上移动30px，-30的向下移动30px
+            这样子就能空出60px留给中间的超链接 */
+            top: calc(var(--i)*1px);
+        }
+        .aa:hover .dd{
+            opacity: 1;
+        }
+		.aa:hover .foot_info_1{
+            opacity: 1;
+        }
+		.aa:hover .foot_info_2{
+            opacity: 1;
+        }
+		.aa:hover .foot_info_3{
+            opacity: 1;
+        }
+		
+        /* .dd{
+            text-decoration: none;
+            color: cyan;
+            font: 60 30px '';
+            line-height: 150px;
+            opacity: 0;
+            transition: .3s;
+        } */
+		.foot_info_3{
+			text-decoration: none;
+            color: cyan;
+            font: 60 40px '';
+            line-height: 150px;	
+            opacity: 0;
+            transition: .3s;
+		}
+		.foot_info_2{
+			text-decoration: none;
+            color: cyan;
+            font: 60 24px '';
+            line-height: 150px;	
+            opacity: 0;
+            transition: .3s;
+		}
+		.foot_info_1{
+			text-decoration: none;
+            color: cyan;
+            font: 60 50px '';
+            line-height: 150px;	
+            opacity: 0;
+            transition: .3s;
+		}
+        .aa{
+        	float: left;
+        	margin: 0 5.5%;
+        	display: inline-block;
+        	margin-bottom:150px ;
+        	margin-top:-250px ;
+        	left: 10%;
+        }
+		#foot_right img{
+			height: 99px;
+		}
+        
+
+
+		</style>
+	</head>
+	<body>	
+		
+		
+		<div id="header">
+			<img src="img/微信图片_20231222204242.png" id="logo" width="290px" alt="" height="90px"/>
+			<div id="nav">
+				<a href="#Top">TOP</a>
+				<a href="#Work">WORK</a>
+				<a href="#Contact">CONTACT</a>
+				<a href="#foot1">JOIN US</a>
+			</div>
+		</div>
+		
+		
+		
+		
+		 <div class="a2">
+       		 <input type="text" class="b2">
+       		 <a href="#" class="c2">
+          	 <img src="img/搜索框.png" style="width: 30px;">
+       		 </a>
+       </div>
+		
+		
+		
+		
+		
+	 	<a name="Top"><div class="a1"></a>
+	 		<button class="leftbtn"><</button>
+	 		 <button class="rightbtn">></button>
+	 		 <div class="circle">
+	 		 	<span class="active"></span>
+	 		 		<span></span>
+	 		 		<span></span>
+	 		 		<span></span>
+	 		 		<span></span>
+	 		 		<span></span>
+	 		 		<span></span>
+	 		 </div>
+			 
+				<div id="pic1" class="b"><img src="img/1v.gif" width="400px"></div>
+				<div id="pic2"class="b"><img src="img/2v.gif" width="400px"></div>
+				<div id="pic3"class="b"><img src="img/3v.gif" width="400px"></div>
+				<div id="pic4"class="b"><img src="img/4v.gif" width="400px"></div>
+				<div id="pic5"class="b"><img src="img/5v.gif" width="400px"></div>
+				<div id="pic6"class="b"><img src="img/6v.gif" width="400px"></div>
+				<div id="pic7"class="b"><img src="img/7v.gif" width="400px"></div>
+		
+	        
+	    </div>
+	    <p class="kong"> &nbsp;</p>	    
+
+	      <hr />
+	    <h1>下面为我xzt个人做的网页展示,不足之处还望谅解。本网页将以往所学成果汇总于此，制作于二零二三年十二月份。点击各个图标可以转到相应的网页。</h1>
+	    <h2>The contents are as follows</h2>
+	    <hr />
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    <div class="clear"> </div>
+	    	
+	   
+	<div id="gun">    
+	    
+
+    <div class="container">
+        <div class="box">
+            <div class="item">
+                <!-- 默认第一个选中 -->
+                <input type="radio" name="btn" id="btn1" checked>
+                <label for="btn1" style="--i:1"></label>
+                <div class="img">
+                    <img src="img/html5(1).jpg" width="330px" height="300px" alt="">
+                    <div class="right"> HTML常用标签</div>
+					
+                </div>
+            </div>
+
+
+            <div class="item">
+                <input type="radio" name="btn" id="btn2">
+                <label for="btn2" style="--i:2"></label>
+                <div class="img">
+                    <img src="img/chis.png" width="330px" height="300px" alt="">
+                    <div class="right"> 特殊字体-池上</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="radio" name="btn" id="btn3">
+                <label for="btn3" style="--i:3"></label>
+                <div class="img">
+                    <img src="img/tushu.png"   width="330px" height="300px" alt="">
+                    <div class="right"> 浮动和定位 </div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="radio" name="btn" id="btn4">
+                <label for="btn4" style="--i:4"></label>
+                <div class="img">
+                    <img src="img/canting.jpeg" height="300px" width="330px"  alt="">
+                    <div class="right"> 背景的定义 </div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="radio" name="btn" id="btn5">
+                <label for="btn5" style="--i:5"></label>
+                <div class="img">
+                    <img src="img/xxjb.jpg" height="300px" width="330px"  alt="">
+                    <div class="right"> 渐变</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="radio" name="btn" id="btn6">
+                <label for="btn6" style="--i:6"></label>
+                <div class="img">
+                    <img src="img/18.1.png" height="300px" width="330px" alt="">
+                    <div class="right"> 动画</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <a name="Work"><h2>————学习历程————</h2></a>
+    
+    
+    
+    
+    
+    <div id="container3">
+    	
+    	
+    	<div class="warp">   		
+    		<a href="html/h5index.html"><img src="img/ht3.jpg"/></a>
+    		<div class="test1">HTML常用标签 </div>
+    		<!--<span class="test2">  &nbsp;</span>-->
+    			
+    		
+    	</div>
+    	
+    	
+    	<div class="warp">
+    		<a href="html/0507chishang.html"><img src="img/11.1cs.png"/></a>
+    		<div class="test1">文本处理-池上</div>
+    	</div>
+    	
+    	
+        <div class="warp">
+    		<a href="html/0514xinzhi.html"><img src="img/xin11.jpg"/></a>
+    		<div class="test1">背景与表单-信件 </div>
+    	</div>
+    	
+    	
+    	<div class="warp">
+    		<a href="html/0521jinhuashiminggongyue.html"><img src="img/gongyue1.jpg"/></a>
+    		<div class="test1">金华市民公约 </div>
+    	</div>
+    	
+    	
+    	     <div class="warp">
+    		<a href="html/0528tushuqingdan.html"><img src="img/14.1.jpg"/></a>
+    		<div class="test1">网页浮动-图书清单 </div>
+    	</div>
+    	
+    	
+    	 <div class="warp">
+    		<a href="html/0604wangyejiaodian.html"><img src="img/15.1.jpg"/></a>
+    		<div class="test1">网页焦点图（定位) </div>
+    	</div>
+    	
+    	
+    	  <div class="warp">
+    		<a href="html/zhongguoshufa.html"><img src="img/shufffa1.jpg"/></a>
+    		<div class="test1">中国书法网页设计</div>
+    	</div>
+    	
+    	
+    	 <div class="warp">
+    		<a href="html/0611zhaopianqiang.html"><img src="img/18.1.png"/></a>
+    		<div class="test1">动画-照片墙 </div>
+    	</div>
+    	
+    	
+    	  <div class="warp">
+    		<a href="html/0507wuhuanzhige.html"><img src="img/wuhuan11.jpg"/></a>
+    		<div class="test1">五环之歌 </div>
+    	</div>
+    	
+    	
+    	
+    	
+    	
+    	
+    	    	  <div class="warp">
+    		<a href="html/0514zhejiangxueyuanxinxiye.html"><img src="img/xueyuan1.jpg"/></a>
+    		<div class="test1">学员信息页</div>
+    	</div>
+    	
+    	    	  <div class="warp">
+    		<a href="html/0611daohangtiao.html"><img src="img/donghua1.jpg"/></a>
+    		<div class="test1">动画导航条 </div>
+    	</div>
+    	
+    	    	  <div class="warp">
+    		<a href="html/0507xinwenliebiao.html"><img src="img/xinweng1.jpg"/></a>
+    		<div class="test1">新闻表单 </div>
+    	</div>
+    	
+    	    	  <div class="warp">
+    		<a href="html/youziyin.html"><img src="img/yzy1.jpg"/></a>
+    		<div class="test1">游子吟</div>
+    	</div>
+    	
+    	    	  <div class="warp">
+    		<a href="html/May21st_boxshadow.html"><img src="img/heyy.jpg"/></a>
+    		<div class="test1">盒阴影 </div>
+    	</div>
+    	
+    	    	  <div class="warp">
+    		<a href="html/jinhua.html"><img src="img/jh1.jpg"/></a>
+    		<div class="test1">我眼中的金华</div>
+    	</div>
+    	
+    	
+    </div>
+    
+    <a name="Contact"><hr class="hr2"/></a>
+
+
+
+
+			
+			
+			
+			
+			    <div class="aa">
+        <div class="bb" style="--i:-30">SCHOOL</div>
+        <div class="cc" style="--i:30">SCHOOL</div>
+        <a href="#" class="foot_info_1">数智学院</a>
+    </div>
+    <div class="aa">
+        <div class="bb" style="--i:-30">CLASS</div>
+        <div class="cc" style="--i:30">CLASS</div>
+        <a href="#" class="foot_info_2">23计科专升本1</a>
+    </div>
+    <div class="aa">
+        <div class="bb" style="--i:-30">DATE</div>
+        <div class="cc" style="--i:30">DATE</div>
+        <a href="#" class="foot_info_3">2023.12</a>
+    </div>
+			
+			
+			
+
+
+
+
+	    
+	    
+
+		
+		<div class="clear"></div>
+		<footer>
+			<div id="foot_left">
+			<img src="img/wlgLogo.png"/>	
+			<p>数据科学与人工智能学院</p>
+			<p>Wintec International College </p>
+			<!--<img src="img/contact1 (1).jpg"/>-->
+			<!--<img src="img/contact2.jpg"/>-->
+			
+			<!--<img src="img/facebook.png"/>-->
+			</div>
+			<div id="foot_right">
+				<a name="foot1"><img src="img/微信图片_20231222204242.png" alt="" /></a>
+				<div id="foot_rightdiv">
+				<p>Design By XZT &nbsp; WeChatID：***</p>				
+				<p>学号23219141159</p>
+				<p> © Copyright Reserved -Class23计科专升本1</p>						
+				</div>
+		
+			</div>
+		</footer>
+		
+	</body>
+</html>
+<script>
+	let top_pic=document.getElementsByClassName('a1')
+	let pic1=document.getElementById("pic1")
+	let pic2=document.getElementById("pic2")
+	let pic3=document.getElementById("pic3")
+	let pic4=document.getElementById("pic4")
+	let pic5=document.getElementById("pic5")
+	let pic6=document.getElementById("pic6")
+	let pic7=document.getElementById("pic7")
+	const pic_li = [pic1,pic2,pic3,pic4,pic5,pic6,pic7]
+
+	let circle=document.getElementsByClassName('circle')[0]
+	let ali=circle.getElementsByTagName('span')
+	
+	let num=0;
+	let index=0
+	let timer=null;
+
+	function fnTab() {
+		changeImg()
+		
+		for (let i = 0; i < ali.length; i++) {
+			ali[i].className = ''; 
+			
+		}
+		ali[num].className = 'active'; 
+	}
+	fnTab()
+	for(let j = 0; j < ali.length; j++) {
+		ali[j].index = j; //为每个列表项自定义索引属性，属性值和数组下标一一对应
+		ali[j].onclick = function() {
+			num = this.index; //将当前li的索引属性值赋给变量num
+			fnTab();
+		};
+	}
+	function autoPlay() { //使用定时器实现每隔2秒自动切换图片
+		timer = setInterval(function() {
+			num++;
+			num %= pic_li.length;
+			index = num;
+		
+			fnTab();
+			
+			backImg()
+			
+		}, 2000);
+	}
+
+	
+	autoPlay()
+	function changeImg() {
+		pic_li[num].style.flexShrink=0;
+		pic_li[num].style.flexGrow=0;
+	}
+	function backImg(){
+		if(num==0) {
+		
+		pic_li[6].style=null;
+		pic_li[6].style.transition='.7s';
+		pic_li[6].style.overflow='hidden';
+		}else{
+			pic_li[index-1].style=null;
+		pic_li[index-1].style.transition='.7s';
+		pic_li[index-1].style.overflow='hidden';
+		}
+		
+		
+	}
+	
+			pic_li[num].onmouseout = autoPlay; //鼠标移开图片后继续自动切换图片
+	pic_li[num].onmouseover = function() { //鼠标移到图片上停止图片切换
+		
+		clearInterval(timer);
+	};
+	
+	
+	
+</script>
