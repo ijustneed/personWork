@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div style="margin: 200px auto;background-color: #fff;width:350px ;height: 340px;padding: 20px;border-radius: 10px;">
+        <div style="margin: 200px auto;background-color: #fff;width:350px ;height: 400px;padding: 20px;border-radius: 10px;">
             <div style="margin: 20px; text-align: center;font-size: 24px;"><b>登录</b></div>
             
                 <div class="form-group">
@@ -26,6 +26,10 @@
                   <label for="loadusername">用户名</label>
                   <input type="text" class="form-control" id="username"  placeholder="Enter email">
                   
+                </div>
+                <div>
+                    <label for="loadnickname">昵称</label>
+                    <input type="text" class="form-control" id="nickname"  >
                 </div>
                 <div class="form-group">
                   <label for="loadpassword">密码</label>
@@ -58,20 +62,10 @@
 </style>
 <script>
   function check(){
-    if(window.localStorage.hasOwnProperty('username')==false|| window.localStorage.hasOwnProperty('password')==false) {
 
-alert('请先注册')
-}
-    let username = document.getElementById('#username')
-    let password = document.getElementById('#password')
-    
-    if (username==123&&password=='xxx') {
-      window.location.replace("index.html")
-     
-     
-    }
-    window.localStorage.setItem('username',username)
-    window.localStorage.setItem('password',password)
+   let nickname=document.querySelector('#nickname').value
+   window.localStorage.setItem('nickname',nickname)
+   window.location.replace("index.html")
   }
 
   
