@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .news {
+            margin-left: 100px;
+            margin-top: 100px;
+            width: 190px;
+            height: 130px;            
+        }
+
+        h4 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        h4>a {
+            color: #999;
+            font-size: 12px;
+            padding-left: 56px;
+
+        }
+        li {
+            width: 160px;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+
+        li>a>span:first-child {
+            /* 在给文字设背景或者边框时，一定要注意包裹文字的标签类型，然后决定是否要进行标签类型转换 */
+            display: inline-block;
+            width: 35px;
+            height: 16px;
+            background-color: rgba(225, 37, 27, .08);
+            color: #e1251b;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: center;
+        }
+        li>a>span:last-child {
+            color: #666;
+            font-size: 12px;
+        }
+        a>span:last-child:hover {
+            color: #e1251b;
+        }
+        a:hover {
+            color: #e1251b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <h4>京东快报
+            <a href="#">更多></a>
+        </h4>
+        <ul>
+            <li>
+                <a href="#">
+                    <span>热门</span>
+                    <span>重新定义旗舰处理器，AMD锐龙9 7950X究竟有多强</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>最新</span>
+                    <span>总吃外卖要及时补充营养，汤臣倍健营养品来了</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>热评</span>
+                    <span>重新定义旗舰处理器，AMD锐龙9 7950X究竟有多强</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>HOT</span>
+                    <span>红米商务笔记本测评，让你体验出彩的轻薄猛机</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

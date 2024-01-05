@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        list-style: none;
+    }
+    .slide{
+   
+    float: left;
+    position: relative;
+    width: 590px;
+    height: 470px;
+    background-color: #fff;
+}
+.prev,.next{
+    color: #ccc;
+    text-align: center;
+    width: 25px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    line-height: 35px;
+    background-color: rgba(0,0,0,.15);
+    font-size: 20px;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+    border-radius: 0 18px 18px 0;
+}
+.next{
+    right: 0;
+    border-radius: 18px 0 0 18px;
+}
+.banner-btn{
+    left: 30px;
+    bottom: 20px;
+    width: 120px;
+    height: 15px;
+    position: absolute;
+}
+.banner-btn li{
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(0,0,0,.05);
+    margin-right: 4px;
+    border-radius: 50%;
+    background-color: rgba(255, 255,255, .4);
+    transition: background .2s ease;
+}
+.banner-btn .active{
+    position: relative;
+    top: -2px;
+    width: 8px;
+    height: 8px;
+    border: 3px solid rgba(0,0,0,.1)   ;
+    background-color: greenyellow;
+}
+.wrap{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+</style>
+<body>
+    <div class="warp">
+        <div class="slide">
+            <a href="javascript:;">
+                <img class="img" src="../img/1.jpg" alt="">   
+            </a>
+            <a href="javascript:;" class="prev"><</a>
+            <a href="javascript:;" class="next">></a>
+            <ul class="banner-btn">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+              
+            
+        </div>
+    </div>
+   
+</body>
+<script>
+    let lis = document.querySelectorAll('.banner-btn li')
+    let slide =document.querySelector('.slide')
+    let prev = document.querySelector('.prev')
+let next = document.querySelector('.next')
+let img = document.querySelector('.img')
+let imgArr=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg']
+let count=0;
+let recommendCount=0;
+function cutImg() {
+    img.src='../img/'+imgArr[count];
+  
+    for(let i =0;i<lis.length;i++) {
+        lis[i].className=""
+    }
+    lis[count].className='active'
+
+}
+let timer = setInterval(function () {  
+    count++;
+   
+    if(count>imgArr.length-1) {
+        count=0;
+    }
+    
+    cutImg();
+},2000)
+next.onclick=function () {  
+    count++;
+    if(count>imgArr.length-1) {
+        count=0;
+    }
+    cutImg();
+}
+prev.onclick=function () {  
+    count--;
+    if(count<0) {
+      count=imgArr.length-1;
+    }
+    cutImg();
+}
+slide.onmouseover=function () {
+   clearInterval(timer)
+  }
+
+  slide.onmouseout=function () { 
+    timer = setInterval(function () {  
+        count++;
+       
+        
+        if(count>imgArr.length-1) {
+            count=0;
+        }
+        
+        cutImg();
+    },2000)
+ }
+ for(let i = 0;i<lis.length;i++) {
+    lis[i].onclick=()=>{
+        count =i;
+        cutImg();
+    }
+ }
+</script>
+</html>
