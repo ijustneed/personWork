@@ -527,7 +527,7 @@
 	    <p class="kong"> &nbsp;</p>	    
 
 	      <hr />
-	    <h1>下面为我xzt个人做的网页展示,不足之处还望谅解。本网页将以往所学成果汇总于此，制作于二零二三年十二月份。点击各个图标可以转到相应的网页。</h1>
+	    <h1 class="welcome">下面为我xzt个人做的网页展示,不足之处还望谅解。本网页将以往所学成果汇总于此，制作于二零二三年十二月份。点击各个图标可以转到相应的网页。</h1>
 	    <h2>The contents are as follows</h2>
 	    <hr />
 	    
@@ -648,7 +648,7 @@
     	
     	 <div class="warp">
     		<a href="html/lunbotu.html"><img src="img/15.1.jpg"/></a>
-    		<div class="test1">网页焦点图（定位) </div>
+    		<div class="test1">轮播图的实现</div>
     	</div>
     	
     	
@@ -840,7 +840,28 @@
 		
 		clearInterval(timer);
 	};
+	let welcome = document.querySelector('.welcome')
+	let nickname = window.localStorage.getItem('nickname')
+	window.onload=function() {
+    
+    function loadNickName() {
+		if(nickname==null){
+			welcome.innerText='下面为我xzt个人做的网页展示,不足之处还望谅解。本网页将以往所学成果汇总于此，制作于二零二三年十二月份。点击各个图标可以转到相应的网页。'
+			
+		}else  {
+			welcome.innerText='Hi~欢迎'+nickname
+		}
+        
+       
+        
+    }
+	loadNickName()
+    
 	
+    
+    
+ }
+ 
 	
 	
 </script>
